@@ -17,7 +17,9 @@ if(isset($_POST['email']) && isset($_POST['password'])){
 		// TODO
 
 		// Force user connection to access dashboard
-		(userConnection($db, $_POST['email'], $_POST['password']) == true);
+
+		if (userConnection($db, $_POST['email'], $_POST['password']) == true);
+
 		
 		header('Location: dashboard.php');
 
