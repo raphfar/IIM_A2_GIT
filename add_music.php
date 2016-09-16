@@ -18,7 +18,7 @@ if( isset($_FILES['music']) && !empty($_FILES['music']) &&
 			$destination = "musics/{$filename}.{$_SESSION['id']}.{$ext}";
  
 			exec('INSERT INTO IIM_GIT_SoundCloud(title,file) VALUES($filename,$destination)');
-
+			
 		} else {
 			$error = 'Erreur, le fichier n\'a pas une extension autorisée !';
 		}
